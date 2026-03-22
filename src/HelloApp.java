@@ -4,15 +4,11 @@ class HelloApp {
             System.out.println("Hello, World!");
             return;
         }
-        System.out.print("Hello, ");
-        int count = 0;
+        String result = "";
         for (String name : args) {
-            System.out.print(name);
-            count++;
-        if (count < args.length) {
-                System.out.print(", ");
-            }
+            result += name + ", ";
         }
-        System.out.println("!");
+        result = result.substring(0, result.length() - 2);
+        System.out.println("Hello, " + result + "!");
     }
 }
